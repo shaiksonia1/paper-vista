@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Paper Filter</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Paper-Vista</h1>
+    </header>
+    <div class="filter-container">
+      <div id="filter-widget">
+        <div class="filter-item">
+          <label for="filter-title">Title</label>
+          <input type="text" id="filter-title" placeholder="Filter by Title">
+        </div>
+        <div class="filter-item">
+          <label for="filter-citations">Min Citations</label>
+          <input type="number" id="filter-citations" placeholder="Min Citations">
+        </div>
+        <div class="filter-item">
+          <label for="filter-start-year">Start Year</label>
+          <input type="number" id="filter-start-year" placeholder="Start Year">
+        </div>
+        <div class="filter-item">
+          <label for="filter-end-year">End Year</label>
+          <input type="number" id="filter-end-year" placeholder="End Year">
+        </div>
+        <div class="filter-item">
+          <label for="rows-per-page">Records per Page</label>
+          <select id="rows-per-page">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+
+      </div>
+      <button id="export-btn">Export Filtered Data</button>
+      <button id="clear-filters-btn">Clear All Filters</button>
+
+    </div>
+    <div id="card-container"></div>
+    <div class="pagination">
+      <button id="prev-btn">Previous</button>
+      <button id="next-btn">Next</button>
+    </div>
+    <footer>
+      <p>&copy; 2024 Research Explorer</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

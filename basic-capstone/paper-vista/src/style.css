@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #231942;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #3c096c, #9d4edd);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  margin: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; 
+}
+
+.filter-container .filter-item {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.filter-container input,
+.filter-container select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.filter-container button {
+  padding: 0.7rem 1.5rem;
+  background-color: #3c096c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.no-data{
+  color: white;
+}
+.filter-container button:hover {
+  background-color: #7b2cbf;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #3c096c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #7b2cbf;
+}
+
+#card-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 1.5rem; 
+  padding: 1.5rem 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #3c096c;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.card p strong {
+  color: #333;
+}
+
+.card .description .dots {
+  display: none;
+}
+.read-more-btn{
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+}
+.read-more-btn:hover{
+  cursor: pointer;
+  color: #9d4edd;
+}
+
+.card .description .more-text.hidden {
+  display: none;
+}
+
+#filter-widget {
+  display: flex;
+}
+
+#clear-filters-btn{
+  margin: 1rem;
+}
+footer{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3c096c, #9d4edd);
+  padding: 1rem;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .filter-container .filter-item {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    flex-direction: column;
+
+  }
+
+  #card-container {
+    padding: 1rem;
+  }
+
+#filter-widget {
+  display: block;
+}
+
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .filter-container button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .pagination button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
